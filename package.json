@@ -1,0 +1,19 @@
+{
+	"name": "orz2",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"build": "npm run build:orz2-ui && npm run build:vue2-h5 && npm run build:vue3-h5",
+		"dev:orz2-ui": "pnpm -r --filter=orz2-ui run dev",
+		"dev:vue2-h5": "pnpm -r --filter=vue2-h5 run dev",
+		"dev:vue3-h5": "pnpm -r --filter=vue3-h5 run dev",
+		"build:orz2-ui": "pnpm -r --filter=orz2-ui run build",
+		"build:vue2-h5": "pnpm -r --filter=vue2-h5 run build",
+		"build:vue3-h5": "pnpm -r --filter=vue3-h5 run build"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC"
+}

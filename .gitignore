@@ -1,0 +1,13 @@
+.temp/
+.rn_temp/
+.DS_Store
+.swc
+*.tar.gz
+dist/
+node_modules/
+script/private
+
+
+.DS_Store
+node_modules
+/dist

@@ -1,0 +1,7 @@
+packages:
+  # 各npm库项目
+  - 'packages/**'
+  # 各技术栈的壳子项目
+  - 'subs/**'
+  # 微前端基座项目
+  - 'orz2-ui'
