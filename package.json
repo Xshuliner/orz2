@@ -5,15 +5,15 @@
 	"main": "index.js",
 	"type": "module",
 	"scripts": {
-		"build": "npm run build:orz2-ui && npm run build:vue2-h5 && npm run build:vue3-h5",
-		"dev:orz2-ui": "pnpm -r --filter=orz2-ui run dev",
-		"dev:vue2-h5": "pnpm -r --filter=vue2-h5 run dev",
-		"dev:vue3-h5": "pnpm -r --filter=vue3-h5 run dev",
-		"build:orz2-ui": "pnpm -r --filter=orz2-ui run build",
-		"build:vue2-h5": "pnpm -r --filter=vue2-h5 run build",
-		"build:vue3-h5": "pnpm -r --filter=vue3-h5 run build"
+		"dev": "turbo run dev --parallel --no-cache",
+		"build": "turbo run build --parallel --no-cache",
+		"dev:@orz2/vue2-h5": "pnpm -r --filter=@orz2/vue2-h5 run dev",
+		"dev:@orz2/vue3-h5": "pnpm -r --filter=@orz2/vue3-h5 run dev"
 	},
 	"keywords": [],
 	"author": "",
-	"license": "ISC"
+	"license": "ISC",
+	"devDependencies": {
+		"turbo": "1.3.2"
+	}
 }

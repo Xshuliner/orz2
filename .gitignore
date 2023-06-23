@@ -4,10 +4,10 @@
 .swc
 *.tar.gz
 dist/
+lib/
 node_modules/
 script/private
 
 
 .DS_Store
 node_modules
-/dist

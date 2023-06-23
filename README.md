@@ -1,5 +1,9 @@
 # orz2 组件库项目
 
+## 应用技术
+
+pnpm + turbo + wujie + vue2 + vue3 + react + rollup
+
 ## 项目结构
 
 ### packages
@@ -57,7 +61,21 @@ $ pnpm -r --filter=<workspace_name> run <script>
 1. 磁盘空间利用非常高效
 2. 支持 monorepo
 
-## 无界介绍
+## 参考文档
+
+### 无界
 
 官方文档
 https://wujie-micro.github.io/doc/
+
+### turbo
+
+#### 官方文档
+
+https://turbo.build/
+https://turbo.build/repo/docs
+https://github.com/vercel/turbo
+
+#### turbo.json 文档
+
+https://turbo.build/repo/docs/reference/codemods#create-turbo-config

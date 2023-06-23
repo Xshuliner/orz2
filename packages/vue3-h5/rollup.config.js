@@ -37,24 +37,24 @@ const optionsPx2vw = {
 };
 
 const config = {
-	input: './src/vue3.h5/index.js',
+	input: './src/index.js',
 	output: [
 		{
-			file: './lib.vue3.h5/index.umd.js',
+			file: './lib/index.umd.js',
 			format: 'umd',
 			name: 'orz'
 		},
 		{
-			file: './lib.vue3.h5/index.esm.js',
+			file: './lib/index.esm.js',
 			format: 'esm'
 		},
 		{
-			file: './lib.vue3.h5/index.cjs.js',
+			file: './lib/index.cjs.js',
 			format: 'cjs'
 		}
 	],
 	plugins: [
-		cleandir('lib.vue3.h5'),
+		cleandir('lib'),
 		commonjs(),
 		babel({
 			exclude: 'node_modules/**',

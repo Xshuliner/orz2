@@ -13,7 +13,6 @@ export default {
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import { sayHello } from '../../utils';
 
 const props = defineProps({
 	msg: String
@@ -25,7 +24,6 @@ const count = ref(0);
 // 挂载完毕生命周期
 onMounted(() => {
 	console.log('OrzList mounted.');
-	sayHello('222');
 });
 
 // 绑定点击事件

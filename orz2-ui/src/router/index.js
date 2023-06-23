@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Home from '../views/Home.vue';
 import ReactH5 from '../views/ReactH5.vue';
 import Vue2H5 from '../views/Vue2H5.vue';
 import Vue3H5 from '../views/Vue3H5.vue';
@@ -12,17 +11,7 @@ Vue.use(VueRouter);
 const routes = [
 	{
 		path: '/',
-		redirect: '/home'
-	},
-	{
-		path: '/home',
-		name: 'home',
-		component: Home
-	},
-	{
-		path: '/react-h5',
-		name: 'react-h5',
-		component: ReactH5
+		redirect: '/vue2-h5'
 	},
 	{
 		path: '/vue2-h5',
@@ -33,6 +22,11 @@ const routes = [
 		path: '/vue3-h5',
 		name: 'vue3-h5',
 		component: Vue3H5
+	},
+	{
+		path: '/react-h5',
+		name: 'react-h5',
+		component: ReactH5
 	}
 ];
 

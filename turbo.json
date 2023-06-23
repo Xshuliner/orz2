@@ -1,0 +1,14 @@
+{
+	"pipeline": {
+		"start": {},
+		"dev": {},
+		"docs:dev": {},
+		"test": {},
+		"build": {
+			"cache": false
+		},
+		"lint": {},
+		"esm": {},
+		"start:esm": {}
+	}
+}

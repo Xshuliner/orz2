@@ -25,7 +25,7 @@ const degrade = window.localStorage.getItem('degrade') === 'true' || !window.Pro
 const configSubs = {
 	'react-h5': {
 		name: 'react-h5',
-		url: isProd ? '//react.dev/' : '//localhost:9401/',
+		url: isProd ? '//react.dev/' : '//react.dev/',
 		attrs: {},
 		exec: true,
 		alive: true,
