@@ -4,6 +4,13 @@
 	"description": "",
 	"main": "lib/index.cjs.js",
 	"module": "lib/index.esm.js",
+	"exports": {
+		".": {
+			"import": "./lib/index.mjs",
+			"require": "./lib/index.cjs"
+		},
+		"./package.json": "./package.json"
+	},
 	"files": [
 		"lib",
 		"README.md"
@@ -13,7 +20,12 @@
 	"license": "ISC",
 	"scripts": {
 		"dev": "cross-env NODE_ENV=development rollup -w -c rollup.config.js",
-		"build": "cross-env NODE_ENV=production rollup -c rollup.config.js"
+		"lib": "cross-env NODE_ENV=production rollup -c rollup.config.js",
+		"publish": "npm run lib && npm publish --access public"
+	},
+	"dependencies": {
+		"@orz2/config": "^1.0.1",
+		"@orz2/utils": "^1.0.0"
 	},
 	"devDependencies": {
 		"@babel/core": "7.21.3",
@@ -39,6 +51,5 @@
 		"rollup-plugin-vue": "^5.1.9",
 		"vue": "2.7.10",
 		"vue-template-compiler": "2.7.10"
-	},
-	"dependencies": {}
+	}
 }

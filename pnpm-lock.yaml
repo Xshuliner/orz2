@@ -45,49 +45,59 @@ importers:
     specifiers:
       '@babel/core': 7.21.3
       '@rollup/plugin-babel': 6.0.3
+      '@rollup/plugin-image': ^3.0.2
       cross-env: ^7.0.3
       rimraf: 4.1.2
       rollup: 3.20.0
       rollup-plugin-cleandir: 2.0.0
       rollup-plugin-commonjs: ^10.1.0
       rollup-plugin-json: ^4.0.0
+      rollup-plugin-svg: ^2.0.0
       rollup-plugin-terser: 7.0.2
     devDependencies:
       '@babel/core': 7.21.3
       '@rollup/plugin-babel': 6.0.3_7q3kejatfh3gjru7whmg6sfpeq
+      '@rollup/plugin-image': 3.0.2_rollup@3.20.0
       cross-env: 7.0.3
       rimraf: 4.1.2
       rollup: 3.20.0
       rollup-plugin-cleandir: 2.0.0_rollup@3.20.0
       rollup-plugin-commonjs: 10.1.0_rollup@3.20.0
       rollup-plugin-json: 4.0.0
+      rollup-plugin-svg: 2.0.0
       rollup-plugin-terser: 7.0.2_rollup@3.20.0
 
   packages/utils:
     specifiers:
       '@babel/core': 7.21.3
       '@rollup/plugin-babel': 6.0.3
+      '@rollup/plugin-image': ^3.0.2
       cross-env: ^7.0.3
       rimraf: 4.1.2
       rollup: 3.20.0
       rollup-plugin-cleandir: 2.0.0
       rollup-plugin-commonjs: ^10.1.0
       rollup-plugin-json: ^4.0.0
+      rollup-plugin-svg: ^2.0.0
       rollup-plugin-terser: 7.0.2
     devDependencies:
       '@babel/core': 7.21.3
       '@rollup/plugin-babel': 6.0.3_7q3kejatfh3gjru7whmg6sfpeq
+      '@rollup/plugin-image': 3.0.2_rollup@3.20.0
       cross-env: 7.0.3
       rimraf: 4.1.2
       rollup: 3.20.0
       rollup-plugin-cleandir: 2.0.0_rollup@3.20.0
       rollup-plugin-commonjs: 10.1.0_rollup@3.20.0
       rollup-plugin-json: 4.0.0
+      rollup-plugin-svg: 2.0.0
       rollup-plugin-terser: 7.0.2_rollup@3.20.0
 
   packages/vue2-h5:
     specifiers:
       '@babel/core': 7.21.3
+      '@orz2/config': ^1.0.0
+      '@orz2/utils': ^1.0.0
       '@rollup/plugin-babel': 6.0.3
       '@rollup/plugin-image': ^3.0.2
       '@vue/babel-helper-vue-jsx-merge-props': 1.4.0
@@ -110,6 +120,9 @@ importers:
       rollup-plugin-vue: ^5.1.9
       vue: 2.7.10
       vue-template-compiler: 2.7.10
+    dependencies:
+      '@orz2/config': link:../config
+      '@orz2/utils': link:../utils
     devDependencies:
       '@babel/core': 7.21.3
       '@rollup/plugin-babel': 6.0.3_7q3kejatfh3gjru7whmg6sfpeq
@@ -138,6 +151,8 @@ importers:
   packages/vue3-h5:
     specifiers:
       '@babel/core': 7.21.3
+      '@orz2/config': ^1.0.0
+      '@orz2/utils': ^1.0.0
       '@rollup/plugin-babel': 6.0.3
       '@rollup/plugin-image': ^3.0.2
       '@vue/babel-helper-vue-jsx-merge-props': 1.4.0
@@ -159,6 +174,9 @@ importers:
       rollup-plugin-terser: 7.0.2
       rollup-plugin-vue: ^6.0.0
       vue: 3.2.13
+    dependencies:
+      '@orz2/config': link:../config
+      '@orz2/utils': link:../utils
     devDependencies:
       '@babel/core': 7.21.3
       '@rollup/plugin-babel': 6.0.3_7q3kejatfh3gjru7whmg6sfpeq

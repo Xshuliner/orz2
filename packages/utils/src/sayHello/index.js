@@ -1,5 +1,5 @@
 const sayHello = (str) => {
-	console.log(str || 'Hello World......');
+	console.log('@orz2/utils sayHello', str || 'Hello World......');
 };
 
 export default sayHello;

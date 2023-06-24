@@ -63,6 +63,11 @@ $ pnpm -r --filter=<workspace_name> run <script>
 
 ## 参考文档
 
+### npm
+
+https://www.npmjs.com/
+https://www.npmjs.com/org/orz2
+
 ### 无界
 
 官方文档

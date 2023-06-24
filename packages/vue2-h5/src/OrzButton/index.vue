@@ -9,6 +9,7 @@
 
 <script>
 // import logo from "./assets/logo.png"
+import { sayHello } from '@orz2/utils';
 
 export default {
 	name: 'OrzButton',
@@ -26,6 +27,7 @@ export default {
 	// 挂载完毕生命周期
 	mounted() {
 		console.log('OrzButton mounted.');
+		sayHello('kakkak');
 	},
 	methods: {
 		// 绑定点击事件

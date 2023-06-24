@@ -1,9 +1,16 @@
 {
 	"name": "@orz2/config",
-	"version": "1.0.0",
+	"version": "1.0.2",
 	"description": "",
-	"main": "lib/index.cjs.js",
-	"module": "lib/index.esm.js",
+	"main": "lib/index.cjs",
+	"module": "lib/index.mjs",
+	"exports": {
+		".": {
+			"import": "./lib/index.mjs",
+			"require": "./lib/index.cjs"
+		},
+		"./package.json": "./package.json"
+	},
 	"files": [
 		"lib",
 		"README.md"
@@ -11,17 +18,23 @@
 	"type": "module",
 	"author": "",
 	"license": "ISC",
-	"scripts": {},
+	"scripts": {
+		"dev": "cross-env NODE_ENV=development rollup -w -c rollup.config.js",
+		"lib": "cross-env NODE_ENV=production rollup -c rollup.config.js",
+		"publish": "npm run lib && npm publish --access public"
+	},
+	"dependencies": {},
 	"devDependencies": {
 		"@babel/core": "7.21.3",
 		"@rollup/plugin-babel": "6.0.3",
+		"@rollup/plugin-image": "^3.0.2",
 		"cross-env": "^7.0.3",
 		"rimraf": "4.1.2",
 		"rollup": "3.20.0",
 		"rollup-plugin-cleandir": "2.0.0",
 		"rollup-plugin-commonjs": "^10.1.0",
 		"rollup-plugin-json": "^4.0.0",
+		"rollup-plugin-svg": "^2.0.0",
 		"rollup-plugin-terser": "7.0.2"
-	},
-	"dependencies": {}
+	}
 }

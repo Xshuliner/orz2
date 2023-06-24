@@ -1,13 +1,12 @@
+# 忽略目录
 .temp/
 .rn_temp/
-.DS_Store
-.swc
-*.tar.gz
 dist/
 lib/
 node_modules/
-script/private
+script/private/
 
-
+# 忽略文件
+*.tar.gz
 .DS_Store
-node_modules
+package-lock.json
