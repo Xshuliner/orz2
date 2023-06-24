@@ -9,7 +9,9 @@
 	},
 	"dependencies": {
 		"core-js": "^3.8.3",
-		"vue": "2.7.10"
+		"element-ui": "^2.15.13",
+		"vue": "2.7.10",
+		"vue-router": "^3.6.5"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.12.16",
@@ -21,7 +23,6 @@
 		"eslint-plugin-vue": "^8.0.3",
 		"install": "^0.13.0",
 		"npm": "^9.7.1",
-		"vue-router": "^3.6.5",
 		"vue-template-compiler": "^2.6.14",
 		"wujie-vue2": "^1.0.17"
 	},

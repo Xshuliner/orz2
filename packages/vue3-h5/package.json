@@ -21,7 +21,7 @@
 	"scripts": {
 		"dev": "cross-env NODE_ENV=development rollup -w -c rollup.config.js",
 		"lib": "cross-env NODE_ENV=production rollup -c rollup.config.js",
-		"publish": "npm run lib && npm publish --access public"
+		"deploy": "npm run lib && npm publish --access public"
 	},
 	"dependencies": {
 		"@orz2/config": "^1.0.0",

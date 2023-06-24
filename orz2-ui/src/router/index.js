@@ -10,8 +10,8 @@ Vue.use(VueRouter);
 
 const routes = [
 	{
-		path: '/',
-		redirect: '/vue2-h5'
+		path: '/'
+		// redirect: '/vue2-h5'
 	},
 	{
 		path: '/vue2-h5',
@@ -29,9 +29,6 @@ const routes = [
 		component: ReactH5
 	}
 ];
-
-// 3. 创建路由实例并传递 `routes` 配置
-// 你可以在这里输入更多的配置
 
 const router = new VueRouter({
 	mode: 'hash',

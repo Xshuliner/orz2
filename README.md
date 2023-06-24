@@ -84,3 +84,13 @@ https://github.com/vercel/turbo
 #### turbo.json 文档
 
 https://turbo.build/repo/docs/reference/codemods#create-turbo-config
+
+### Vue
+
+#### Vue2 官方文档
+
+https://v2.cn.vuejs.org/
+
+#### Vue3 官方文档
+
+https://cn.vuejs.org/

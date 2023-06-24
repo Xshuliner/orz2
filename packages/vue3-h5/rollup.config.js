@@ -18,17 +18,17 @@ const config = {
 	input: './src/index.js',
 	output: [
 		{
-			file: './lib/index.umd.js',
-			format: 'umd',
-			name: 'orz'
+			file: './lib/index.cjs',
+			format: 'cjs'
 		},
 		{
-			file: './lib/index.esm.js',
+			file: './lib/index.mjs',
 			format: 'esm'
 		},
 		{
-			file: './lib/index.cjs.js',
-			format: 'cjs'
+			file: './lib/index.umd.js',
+			format: 'umd',
+			name: 'orz'
 		}
 	],
 	plugins: [

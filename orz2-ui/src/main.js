@@ -1,8 +1,11 @@
+import ElementUI from 'element-ui';
 import Vue from 'vue';
 import WujieVue from 'wujie-vue2';
 import router from './router';
 import App from './App.vue';
 import configSubs from './config/subs';
+
+import 'element-ui/lib/theme-chalk/index.css';
 
 const {
 	setupApp
@@ -10,7 +13,7 @@ const {
 	// bus
 } = WujieVue;
 
-Vue.use(WujieVue);
+Vue.use(ElementUI).use(WujieVue);
 
 Vue.config.productionTip = false;
 
