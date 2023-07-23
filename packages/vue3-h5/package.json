@@ -1,6 +1,6 @@
 {
 	"name": "@orz2/vue3-h5",
-	"version": "1.0.0",
+	"version": "0.0.1",
 	"description": "",
 	"main": "lib/index.cjs.js",
 	"module": "lib/index.esm.js",
@@ -24,8 +24,8 @@
 		"deploy": "npm run lib && npm publish --access public"
 	},
 	"dependencies": {
-		"@orz2/config": "^1.0.0",
-		"@orz2/utils": "^1.0.0"
+		"@orz2/config": "^0.0.1",
+		"@orz2/utils": "^0.0.1"
 	},
 	"devDependencies": {
 		"@babel/core": "7.21.3",

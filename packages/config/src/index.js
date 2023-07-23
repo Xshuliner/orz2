@@ -1,7 +1,7 @@
 import rollupOptionsAutoprefixer from './rollupOptionsAutoprefixer';
-import rollupOptionsPx2vw from './rollupOptionsPx2vw';
+import rollupOptionsPx2vp from './rollupOptionsPx2vp';
 
 export {
 	rollupOptionsAutoprefixer, //
-	rollupOptionsPx2vw
+	rollupOptionsPx2vp
 };

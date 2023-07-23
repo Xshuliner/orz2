@@ -1,4 +1,4 @@
-import { rollupOptionsAutoprefixer, rollupOptionsPx2vw } from '@orz2/config';
+import { rollupOptionsAutoprefixer, rollupOptionsPx2vp } from '@orz2/config';
 import { babel } from '@rollup/plugin-babel';
 import autoprefixer from 'autoprefixer';
 import { defineConfig } from 'rollup';
@@ -10,7 +10,7 @@ import svg from 'rollup-plugin-svg';
 import postcss from 'rollup-plugin-postcss';
 import { terser } from 'rollup-plugin-terser';
 import vue from 'rollup-plugin-vue';
-import px2vw from 'postcss-px-to-viewport';
+import px2vp from 'postcss-px-to-viewport';
 
 const prod = process.env.NODE_ENV !== 'development';
 
@@ -49,14 +49,14 @@ const config = {
 			style: {
 				postcssPlugins: [
 					autoprefixer(rollupOptionsAutoprefixer), //
-					px2vw(rollupOptionsPx2vw)
+					px2vp(rollupOptionsPx2vp)
 				]
 			}
 		}),
 		postcss({
 			plugins: [
 				autoprefixer(rollupOptionsAutoprefixer), //
-				px2vw(rollupOptionsPx2vw)
+				px2vp(rollupOptionsPx2vp)
 			],
 			extract: 'css/index.css'
 		}),

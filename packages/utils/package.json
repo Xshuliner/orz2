@@ -1,6 +1,6 @@
 {
 	"name": "@orz2/utils",
-	"version": "1.0.1",
+	"version": "0.0.1",
 	"description": "",
 	"main": "lib/index.cjs",
 	"module": "lib/index.mjs",

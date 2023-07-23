@@ -98,8 +98,8 @@ importers:
   packages/vue2-h5:
     specifiers:
       '@babel/core': 7.21.3
-      '@orz2/config': ^1.0.1
-      '@orz2/utils': ^1.0.0
+      '@orz2/config': ^0.0.1
+      '@orz2/utils': ^0.0.1
       '@rollup/plugin-babel': 6.0.3
       '@rollup/plugin-image': ^3.0.2
       '@vue/babel-helper-vue-jsx-merge-props': 1.4.0
@@ -153,8 +153,8 @@ importers:
   packages/vue3-h5:
     specifiers:
       '@babel/core': 7.21.3
-      '@orz2/config': ^1.0.0
-      '@orz2/utils': ^1.0.0
+      '@orz2/config': ^0.0.1
+      '@orz2/utils': ^0.0.1
       '@rollup/plugin-babel': 6.0.3
       '@rollup/plugin-image': ^3.0.2
       '@vue/babel-helper-vue-jsx-merge-props': 1.4.0
@@ -207,7 +207,7 @@ importers:
     specifiers:
       '@babel/core': ^7.12.16
       '@babel/eslint-parser': ^7.12.16
-      '@orz2/vue2-h5': ^1.0.1
+      '@orz2/vue2-h5': ^0.0.1
       '@vue/cli-plugin-babel': ~5.0.0
       '@vue/cli-plugin-eslint': ~5.0.0
       '@vue/cli-service': ~5.0.0

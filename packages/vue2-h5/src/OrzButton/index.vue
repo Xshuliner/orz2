@@ -2,7 +2,7 @@
 	<div class="OrzButtonWrap">
 		<div class="OrzButtonMsg" @click="handleMsgClick">{{ msg }}</div>
 		<div class="OrzButtonCount" style="display: flex; width: 100px; height: 100px; --fontSize40: 40px">{{ count }}</div>
-		<div class="OrzButtonTest">test1</div>
+		<div class="OrzButtonTest">test0723</div>
 		<img class="OrzButtonLogo" src="./assets/logo.png" />
 	</div>
 </template>

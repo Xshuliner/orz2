@@ -4,6 +4,14 @@
 
 pnpm + turbo + wujie + vue2 + vue3 + react + rollup
 
+## 启动命令
+
+`pnpm install` 安装项目依赖
+
+`pnpm run start` 将项目中包含 start 命令的项目（页面项目）全部运行起来
+`pnpm run build` 将项目中包含 build 命令的项目（页面项目）全部编译并打包输出到 dist 目录
+`pnpm run lib` 将项目中包含 lib 命令的项目（npm 项目）全部编译并打包输出到 lib 目录
+
 ## 项目结构
 
 ### packages
