@@ -1,7 +1,7 @@
 {
 	"name": "@orz2/config",
 	"version": "0.0.1",
-	"description": "",
+	"description": "封装一个为开发人员存放常用配置的统一数据源",
 	"main": "lib/index.cjs",
 	"module": "lib/index.mjs",
 	"exports": {

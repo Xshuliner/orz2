@@ -1,7 +1,7 @@
 {
-	"name": "@orz2/utils",
+	"name": "@orz2/kits",
 	"version": "0.0.1",
-	"description": "封装一个应用在JavaScript的公共方法库",
+	"description": "封装一个应用在node.js的公共方法库",
 	"main": "lib/index.cjs",
 	"module": "lib/index.mjs",
 	"exports": {

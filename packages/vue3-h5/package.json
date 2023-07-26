@@ -1,7 +1,7 @@
 {
 	"name": "@orz2/vue3-h5",
 	"version": "0.0.1",
-	"description": "",
+	"description": "封装一个基于vue3框架用于h5移动端的ui组件库",
 	"main": "lib/index.cjs.js",
 	"module": "lib/index.esm.js",
 	"exports": {
