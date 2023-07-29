@@ -2,8 +2,12 @@
 	"name": "@orz2/utils",
 	"version": "0.0.1",
 	"description": "封装一个应用在JavaScript的公共方法库",
-	"main": "lib/index.cjs",
-	"module": "lib/index.mjs",
+	"keywords": [
+		"utils"
+	],
+	"homepage": "https://www.orz2.top/orz2-ui",
+	"bugs": "https://github.com/Xshuliner/orz2/issues",
+	"repository": "https://github.com/Xshuliner/orz2",
 	"exports": {
 		".": {
 			"import": "./lib/index.mjs",

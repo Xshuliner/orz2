@@ -2,8 +2,12 @@
 	"name": "@orz2/config",
 	"version": "0.0.1",
 	"description": "封装一个为开发人员存放常用配置的统一数据源",
-	"main": "lib/index.cjs",
-	"module": "lib/index.mjs",
+	"keywords": [
+		"config"
+	],
+	"homepage": "https://www.orz2.top/orz2-ui",
+	"bugs": "https://github.com/Xshuliner/orz2/issues",
+	"repository": "https://github.com/Xshuliner/orz2",
 	"exports": {
 		".": {
 			"import": "./lib/index.mjs",

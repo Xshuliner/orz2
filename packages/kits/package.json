@@ -2,8 +2,12 @@
 	"name": "@orz2/kits",
 	"version": "0.0.1",
 	"description": "封装一个应用在node.js的公共方法库",
-	"main": "lib/index.cjs",
-	"module": "lib/index.mjs",
+	"keywords": [
+		"kits"
+	],
+	"homepage": "https://www.orz2.top/orz2-ui",
+	"bugs": "https://github.com/Xshuliner/orz2/issues",
+	"repository": "https://github.com/Xshuliner/orz2",
 	"exports": {
 		".": {
 			"import": "./lib/index.mjs",

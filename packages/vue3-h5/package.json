@@ -2,8 +2,12 @@
 	"name": "@orz2/vue3-h5",
 	"version": "0.0.1",
 	"description": "封装一个基于vue3框架用于h5移动端的ui组件库",
-	"main": "lib/index.cjs.js",
-	"module": "lib/index.esm.js",
+	"keywords": [
+		"vue3"
+	],
+	"homepage": "https://www.orz2.top/orz2-ui",
+	"bugs": "https://github.com/Xshuliner/orz2/issues",
+	"repository": "https://github.com/Xshuliner/orz2",
 	"exports": {
 		".": {
 			"import": "./lib/index.mjs",
