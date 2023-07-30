@@ -1,15 +1,22 @@
 # orz2 组件库项目
 
+## 在线展示
+
+https://www.orz2.top/orz2-ui/
+
+## npm 组织
+
+https://www.npmjs.com/org/orz2
+
 ## 应用技术
 
 pnpm + turbo + wujie + vue2 + vue3 + react + rollup
 
 ## 启动命令
 
-`pnpm install` 安装项目依赖
-
-`pnpm run start` 将项目中包含 start 命令的项目（页面项目）全部运行起来
-`pnpm run build` 将项目中包含 build 命令的项目（页面项目）全部编译并打包输出到 dist 目录
+`pnpm install` 安装项目依赖  
+`pnpm run start` 将项目中包含 start 命令的项目（页面项目）全部运行起来  
+`pnpm run build` 将项目中包含 build 命令的项目（页面项目）全部编译并打包输出到 dist 目录  
 `pnpm run lib` 将项目中包含 lib 命令的项目（npm 项目）全部编译并打包输出到 lib 目录
 
 ## 项目结构
@@ -69,14 +76,7 @@ $ pnpm -r --filter=<workspace_name> run <script>
 1. 磁盘空间利用非常高效
 2. 支持 monorepo
 
-## 参考文档
-
-### npm
-
-https://www.npmjs.com/
-https://www.npmjs.com/org/orz2
-
-### jest 匹配规则
+## jest 匹配规则
 
 - toBe 使用 Object.is 判断是否严格相等。
 - toEqual 递归检查对象或数组的每个字段。
@@ -95,6 +95,8 @@ https://www.npmjs.com/org/orz2
 - toHaveProperty(keyPath, value) 判断对象中是否包含指定属性。
 - toThrow 判断是否抛出指定的异常。
 - toBeInstanceOf 判断对象是否是某个类的实例，底层使用 instanceof。
+
+## 参考文档
 
 ### 无界
 
