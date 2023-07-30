@@ -21,33 +21,24 @@ pnpm + turbo + wujie + vue2 + vue3 + react + rollup
 
 ## 项目结构
 
-### packages
-
-存放打包暴露出去的 npm 库
-
-#### config
-
-通用配置
-
-#### utils
-
-公共方法
-
-#### vue2-h5
-
-vue2 移动端组件库
-
-#### vue3-h5
-
-vue3 移动端组件库
-
-### main
-
-微前端基座项目
-
-### subs
-
-微前端各自技术栈的子壳子项目
+```bash
+.
+├── README.md
+├── orz2-ui # 微前端基座项目
+├── package.json
+├── packages # 存放打包暴露出去的 npm 库
+│   ├── config # 封装一个为开发人员存放常用配置的统一数据源
+│   ├── kits # 封装一个应用在node.js的公共方法库
+│   ├── utils # 封装一个应用在JavaScript的公共方法库
+│   ├── vue2-h5 # 封装一个基于vue2框架用于h5移动端的ui组件库
+│   └── vue3-h5 # 封装一个基于vue3框架用于h5移动端的ui组件库
+├── pnpm-lock.yaml
+├── pnpm-workspace.yaml
+├── subs # 微前端各自技术栈的子壳子项目
+│   ├── vue2-h5 # 基于vue2框架用于h5移动端的子项目
+│   └── vue3-h5 # 基于vue3框架用于h5移动端的子项目
+└── turbo.json
+```
 
 ## pnpm 使用说明
 
@@ -71,7 +62,7 @@ $ pnpm rimraf  **/node_modules
 $ pnpm -r --filter=<workspace_name> run <script>
 ```
 
-优势：
+### pnpm 优势：
 
 1. 磁盘空间利用非常高效
 2. 支持 monorepo

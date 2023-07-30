@@ -1,6 +1,7 @@
 {
 	"name": "vue3-h5",
 	"version": "1.0.0",
+	"description": "基于vue3框架用于h5移动端的子项目",
 	"private": true,
 	"scripts": {
 		"start": "vue-cli-service serve",
