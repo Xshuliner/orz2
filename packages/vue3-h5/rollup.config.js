@@ -24,11 +24,6 @@ const config = {
 		{
 			file: './lib/index.mjs',
 			format: 'esm'
-		},
-		{
-			file: './lib/index.umd.js',
-			format: 'umd',
-			name: 'orz'
 		}
 	],
 	plugins: [

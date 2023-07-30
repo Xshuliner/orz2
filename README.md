@@ -76,6 +76,26 @@ $ pnpm -r --filter=<workspace_name> run <script>
 https://www.npmjs.com/
 https://www.npmjs.com/org/orz2
 
+### jest 匹配规则
+
+- toBe 使用 Object.is 判断是否严格相等。
+- toEqual 递归检查对象或数组的每个字段。
+- toBeNull 只匹配 null。
+- toBeUndefined 只匹配 undefined。
+- toBeDefined 只匹配非 undefined。
+- toBeTruthy 只匹配真。
+- toBeFalsy 只匹配假。
+- toBeGreaterThan 实际值大于期望。
+- toBeGreaterThanOrEqual 实际值大于或等于期望值。
+- toBeLessThan 实际值小于期望值。
+- toBeLessThanOrEqual 实际值小于或等于期望值。
+- toBeCloseTo 比较浮点数的值，避免误差。
+- toMatch 正则匹配。
+- toContain 判断数组中是否包含指定项。
+- toHaveProperty(keyPath, value) 判断对象中是否包含指定属性。
+- toThrow 判断是否抛出指定的异常。
+- toBeInstanceOf 判断对象是否是某个类的实例，底层使用 instanceof。
+
 ### 无界
 
 官方文档
