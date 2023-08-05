@@ -10,7 +10,7 @@ https://www.npmjs.com/org/orz2
 
 ## 应用技术
 
-pnpm + turbo + wujie + vue2 + vue3 + react + rollup
+pnpm + turbo + wujie + vue2 + vue3 + react + rollup + jsdoc
 
 ## 启动命令
 
@@ -43,8 +43,14 @@ pnpm + turbo + wujie + vue2 + vue3 + react + rollup
 ## pnpm 使用说明
 
 ```bash
-# 安装pnpm
+# 安装全局依赖 pnpm
 $ npm install pnpm -g
+
+# 安装全局依赖 rollup
+$ npm install rollup -g
+
+# 安装全局依赖 jsdoc
+$ npm install jsdoc -g
 
 # 安装配置文件中的依赖
 $ pnpm i
