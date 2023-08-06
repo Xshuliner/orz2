@@ -5,9 +5,10 @@
 	"main": "index.js",
 	"type": "module",
 	"scripts": {
-		"start": "turbo run start --parallel --no-cache",
-		"build": "turbo run build --parallel --no-cache",
+		"start": "turbo run start --no-cache",
+		"build": "turbo run build --parallel --no-cache && turbo run doc --parallel --no-cache",
 		"lib": "turbo run lib --parallel --no-cache",
+		"live": "live-server ./dist --core",
 		"dev:@orz2/vue2-h5": "pnpm -r --filter=@orz2/vue2-h5 run dev",
 		"dev:@orz2/vue3-h5": "pnpm -r --filter=@orz2/vue3-h5 run dev"
 	},

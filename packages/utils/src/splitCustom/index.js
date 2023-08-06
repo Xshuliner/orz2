@@ -1,9 +1,11 @@
 /**
+ * @function
+ * @name splitCustom
  * @description 自定义分割字符串
  * @param {string} options.str
  * @param {string} options.separator
  * @param {number} options.limit
- * @returns
+ * @returns {string}
  */
 const splitCustom = (options) => {
 	const { str = '', separator = '', limit = 0 } = options || {};

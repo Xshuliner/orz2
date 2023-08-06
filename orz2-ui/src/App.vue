@@ -1,5 +1,5 @@
 <template>
-	<el-container id="app">
+	<el-container id="app" class="flexBox flexColumn flexJS">
 		<!-- 头部 -->
 		<el-header class="flex0 flexBox flexRow flexJSB flexAC appHeader">
 			<div class="flexBox flexRow flexJS flexAC">
@@ -10,23 +10,8 @@
 				<el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value" />
 			</el-select>
 		</el-header>
-		<el-container class="flex1">
-			<!-- 侧边栏 -->
-			<!-- <el-aside width="200px">
-				<el-menu class="height100">
-					<el-menu-item-group title="分组1">
-						<el-menu-item index="1-1">选项1</el-menu-item>
-						<el-menu-item index="1-2">选项2</el-menu-item>
-					</el-menu-item-group>
-					<el-menu-item-group title="分组2">
-						<el-menu-item index="1-3">选项3</el-menu-item>
-					</el-menu-item-group>
-				</el-menu>
-			</el-aside> -->
-			<!-- 内容区 -->
-			<el-main v-loading="isSubPageLoading" class="width100 height100">
-				<WujieVue width="100%" height="100%" :name="name" :url="url" :sync="true"></WujieVue>
-			</el-main>
+		<el-container v-loading="isSubPageLoading" class="flex1 height0 appBody">
+			<WujieVue :name="name" :url="url" :sync="true"></WujieVue>
 		</el-container>
 		<!-- 测试区域 -->
 		<!-- <el-container v-if="false">
@@ -183,5 +168,10 @@ export default {
 	margin-left: 12px;
 	font-size: 18px;
 	font-weight: bold;
+}
+
+.appBody {
+	position: relative;
+	transform: scale(1);
 }
 </style>

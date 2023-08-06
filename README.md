@@ -48,16 +48,20 @@ ESLint + Prettier
 ## pnpm 使用说明
 
 ```bash
-# 安装全局依赖 pnpm (内部项目版本号不要与线上 npm 版本号相同，如果相同，pnpm install 就会优先拉取本地代码)
+# 安装全局依赖 pnpm
 $ npm install pnpm -g
-
-# 安装全局依赖 rollup
+# 安装全局依赖 rollup (用于打包package)
 $ npm install rollup -g
-
-# 安装全局依赖 jsdoc
+# 安装全局依赖 jest (用于单元测试脚本)
+$ npm install jest -g
+# 安装全局依赖 jsdoc (用于生成文档)
 $ npm install jsdoc -g
+# 安装全局依赖 turbo (用于本地起服务方便多个子项目联调)
+$ npm install turbo --g
+# 安装全局依赖 live-server (用于本地起服务方便jsDoc生成的项目联调)
+$ npm install live-server -g
 
-# 安装配置文件中的依赖
+# 安装配置文件中的依赖 (内部项目版本号不要与线上 npm 版本号相同，如果相同，pnpm install 就会优先拉取本地代码)
 $ pnpm i
 
 # 安装新依赖
@@ -105,17 +109,32 @@ $ pnpm -r --filter=<workspace_name> run <script>
 官方文档
 https://wujie-micro.github.io/doc/
 
-### turbo
+### Turborepo
 
 #### 官方文档
 
 https://turbo.build/
 https://turbo.build/repo/docs
 https://github.com/vercel/turbo
+http://tech.uupt.com/?p=1185
+https://segmentfault.com/a/1190000042282389?sort=newest
 
 #### turbo.json 文档
 
 https://turbo.build/repo/docs/reference/codemods#create-turbo-config
+
+### live-server
+
+#### 官方文档
+
+https://www.npmjs.com/package/live-server
+
+### jsDoc
+
+#### 相关文档
+
+https://jsdoc.bootcss.com/
+https://github.com/pencil-js/clean-jsdoc-theme
 
 ### Vue
 

@@ -1,6 +1,9 @@
 {
 	"pipeline": {
-		"start": {},
+		"start": {
+			"cache": false,
+			"dependsOn": []
+		},
 		"build": {
 			"cache": false
 		},
@@ -8,6 +11,7 @@
 		"lib": {
 			"cache": false
 		},
+		"doc": {},
 		"test": {},
 		"lint": {},
 		"esm": {},

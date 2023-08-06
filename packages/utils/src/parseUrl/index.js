@@ -1,6 +1,8 @@
 import splitCustom from '../splitCustom';
 
 /**
+ * @method
+ * @name parseUrl
  * @description 解析url
  * http://localhost:8080/something?a=1&b=2#/orderDetail?x=3&y=4&z=5
  * |protocol|hostname|port|  page | search |   router  |   query  |
@@ -11,6 +13,7 @@ import splitCustom from '../splitCustom';
  * @param {string} options.url 指定url
  * @param {boolean} options.isVerify 是否开启参数校验 默认开启 遇到传参undefined、null的值自动改为空字符串''
  * @param {boolean} options.isDecode 是否开启参数解码 默认开启 对传参进行解码
+ * @returns {string}
  */
 
 // 解析参数

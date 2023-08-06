@@ -30,6 +30,17 @@ const props = {
 const degrade = window.localStorage.getItem('degrade') === 'true' || !window.Proxy || !window.CustomElementRegistry;
 
 const configSubs = {
+	utils: {
+		name: 'utils',
+		url: isProd ? '//www.orz2.top/orz2-ui/sub-utils/' : '//127.0.0.1:8080/sub-utils/', // 依赖liver-server
+		attrs: {},
+		exec: true,
+		alive: true,
+		props,
+		// fetch: credentialsFetch,
+		degrade,
+		...lifecycles
+	},
 	'react-h5': {
 		name: 'react-h5',
 		url: isProd ? '//react.dev/' : '//react.dev/',
