@@ -1,6 +1,6 @@
 {
 	"name": "@orz2/vue3-h5",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "封装一个基于vue3框架用于h5移动端的ui组件库",
 	"keywords": [
 		"vue3"

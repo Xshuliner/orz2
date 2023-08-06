@@ -26,12 +26,14 @@ importers:
       vue: 2.7.10
       vue-router: ^3.6.5
       vue-template-compiler: ^2.6.14
+      vuex: ^3.6.2
       wujie-vue2: ^1.0.17
     dependencies:
       core-js: 3.31.0
       element-ui: 2.15.13_vue@2.7.10
       vue: 2.7.10
       vue-router: 3.6.5_vue@2.7.10
+      vuex: 3.6.2_vue@2.7.10
     devDependencies:
       '@babel/core': 7.22.5
       '@babel/eslint-parser': 7.22.5_pzleuxjea4cy75xr62zqpq3vhy
@@ -155,7 +157,7 @@ importers:
       vue: 2.7.10
       vue-template-compiler: 2.7.10
     dependencies:
-      '@orz2/config': link:../config
+      '@orz2/config': 0.0.1
       '@orz2/utils': 0.0.1
     devDependencies:
       '@babel/core': 7.21.3
@@ -209,7 +211,7 @@ importers:
       rollup-plugin-vue: ^6.0.0
       vue: 3.2.13
     dependencies:
-      '@orz2/config': link:../config
+      '@orz2/config': 0.0.1
       '@orz2/utils': 0.0.1
     devDependencies:
       '@babel/core': 7.21.3
@@ -255,7 +257,7 @@ importers:
       vue-router: ^3.6.5
       vue-template-compiler: ^2.6.14
     dependencies:
-      '@orz2/vue2-h5': link:../../packages/vue2-h5
+      '@orz2/vue2-h5': 0.0.1
       core-js: 3.31.0
       element-ui: 2.15.13_vue@2.7.10
       vue: 2.7.10
@@ -2074,8 +2076,19 @@ packages:
       fastq: 1.15.0
     dev: true
 
+  /@orz2/config/0.0.1:
+    resolution: {integrity: sha512-CAxJYXC0MxLLvEsBnctgSHTZvSyPxYNdjx+pmnD6nJ68xebsKjqISTC8JXQ4gLkljRJ7k54zEiHaj4UiGRR1vQ==}
+    dev: false
+
   /@orz2/utils/0.0.1:
     resolution: {integrity: sha512-tDDm9X5oqjOTWpucluO6iPax1SfPBL62MNWJ0kXhr2shiWBepfHTm3A6mHBBHE50Xy4PuhR9gV6owMzM8owiYg==}
+    dev: false
+
+  /@orz2/vue2-h5/0.0.1:
+    resolution: {integrity: sha512-N10+orJ58keGU6AnlhQx44O/Wxhu3ENNvRiliw2baskURl2wmEAFIDd8QMYPNI+VL66lF0GRtZTTw2r6KbQtxg==}
+    dependencies:
+      '@orz2/config': 0.0.1
+      '@orz2/utils': 0.0.1
     dev: false
 
   /@polka/url/1.0.0-next.21:
@@ -6385,7 +6398,7 @@ packages:
     dev: true
 
   /hash-sum/1.0.2:
-    resolution: {integrity: sha512-fUs4B4L+mlt8/XAtSOGMUO1TXmAelItBPtJG7CyHJfYTdDjwisntGO2JQz7oUsatOY9o68+57eziUVNw/mRHmA==}
+    resolution: {integrity: sha1-M7QHd3VMZDJXPBIMw4CLvRDUfwQ=}
     dev: true
 
   /hash-sum/2.0.0:
@@ -6577,7 +6590,7 @@ packages:
     dev: true
 
   /image-size/0.5.5:
-    resolution: {integrity: sha512-6TDAlDPZxUFCv+fuOkIoXT/V/f3Qbq8e37p+YOiYrUv3v9cc3/6x78VdfPgFVaB9dZYeLUfKgHRebpkm/oP2VQ==}
+    resolution: {integrity: sha1-Cd/Uq50g4p6xw+gLiZA3jfnjy5w=}
     engines: {node: '>=0.10.0'}
     hasBin: true
     requiresBuild: true
@@ -11104,6 +11117,14 @@ packages:
       '@vue/runtime-dom': 3.2.13
       '@vue/server-renderer': 3.2.13_vue@3.2.13
       '@vue/shared': 3.2.13
+
+  /vuex/3.6.2_vue@2.7.10:
+    resolution: {integrity: sha512-ETW44IqCgBpVomy520DT5jf8n0zoCac+sxWnn+hMe/CzaSejb/eVw2YToiXYX+Ex/AuHHia28vWTq4goAexFbw==}
+    peerDependencies:
+      vue: ^2.0.0
+    dependencies:
+      vue: 2.7.10
+    dev: false
 
   /walker/1.0.8:
     resolution: {integrity: sha512-ts/8E8l5b7kY0vlWLewOkDXMmPdLcVV4GmOQLyxuSswIJsweeFZtAsMF7k1Nszz+TYBQrlYRmzOnr398y1JemQ==}

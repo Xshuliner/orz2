@@ -1,6 +1,6 @@
 {
 	"name": "@orz2/config",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "封装一个为开发人员存放常用配置的统一数据源",
 	"keywords": [
 		"config"

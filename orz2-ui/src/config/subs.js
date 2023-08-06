@@ -1,5 +1,6 @@
 import env from './env';
 import router from '../router';
+import store from '../store';
 
 const isProd = env === 'prod';
 
@@ -9,8 +10,14 @@ const lifecycles = {
 	afterMount: (appWindow) => console.log(`${appWindow.__WUJIE.id} afterMount 生命周期`),
 	beforeUnmount: (appWindow) => console.log(`${appWindow.__WUJIE.id} beforeUnmount 生命周期`),
 	afterUnmount: (appWindow) => console.log(`${appWindow.__WUJIE.id} afterUnmount 生命周期`),
-	activated: (appWindow) => console.log(`${appWindow.__WUJIE.id} activated 生命周期`),
-	deactivated: (appWindow) => console.log(`${appWindow.__WUJIE.id} deactivated 生命周期`),
+	activated: (appWindow) => {
+		console.log(`${appWindow.__WUJIE.id} activated 生命周期`);
+		store.dispatch('updateSubPageLoading', false);
+	},
+	deactivated: (appWindow) => {
+		console.log(`${appWindow.__WUJIE.id} deactivated 生命周期`);
+		store.dispatch('updateSubPageLoading', true);
+	},
 	loadError: (url, e) => console.log(`${url} 加载失败`, e)
 };
 
@@ -36,7 +43,7 @@ const configSubs = {
 	},
 	'vue2-h5': {
 		name: 'vue2-h5',
-		url: isProd ? '//www.orz2.top/orz2-ui/vue2-h5/' : '//localhost:9501/',
+		url: isProd ? '//www.orz2.top/orz2-ui/sub-vue2-h5/' : '//localhost:9501/',
 		attrs: {},
 		exec: true,
 		alive: true,
@@ -47,7 +54,7 @@ const configSubs = {
 	},
 	'vue3-h5': {
 		name: 'vue3-h5',
-		url: isProd ? '//www.orz2.top/orz2-ui/vue3-h5/' : '//localhost:9502/',
+		url: isProd ? '//www.orz2.top/orz2-ui/sub-vue3-h5/' : '//localhost:9502/',
 		attrs: {},
 		exec: true,
 		alive: true,

@@ -1,7 +1,7 @@
 {
-	"name": "vue2-h5",
+	"name": "sub-vue3-h5",
 	"version": "1.0.0",
-	"description": "基于vue2框架用于h5移动端的子项目",
+	"description": "基于vue3框架用于h5移动端的子项目",
 	"private": true,
 	"scripts": {
 		"start": "vue-cli-service serve",
@@ -9,11 +9,8 @@
 		"lint": "vue-cli-service lint"
 	},
 	"dependencies": {
-		"@orz2/vue2-h5": "0.0.1",
 		"core-js": "^3.8.3",
-		"element-ui": "^2.15.13",
-		"vue": "2.7.10",
-		"vue-router": "^3.6.5"
+		"vue": "3.2.13"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.12.16",
@@ -24,14 +21,12 @@
 		"@vue/eslint-config-prettier": "^7.1.0",
 		"@vue/eslint-config-typescript": "^11.0.3",
 		"eslint": "^7.32.0",
-		"eslint-plugin-vue": "^8.0.3",
-		"install": "^0.13.0",
-		"npm": "^9.7.1",
-		"vue-template-compiler": "^2.6.14"
+		"eslint-plugin-vue": "^8.0.3"
 	},
 	"browserslist": [
 		"> 1%",
 		"last 2 versions",
-		"not dead"
+		"not dead",
+		"not ie 11"
 	]
 }

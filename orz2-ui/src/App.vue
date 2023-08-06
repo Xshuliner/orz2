@@ -24,7 +24,7 @@
 				</el-menu>
 			</el-aside> -->
 			<!-- 内容区 -->
-			<el-main>
+			<el-main v-loading="isSubPageLoading" class="width100 height100">
 				<WujieVue width="100%" height="100%" :name="name" :url="url" :sync="true"></WujieVue>
 			</el-main>
 		</el-container>
@@ -43,6 +43,7 @@
 </template>
 
 <script>
+import { mapState, mapActions } from 'vuex';
 import configSubs from './config/subs';
 
 export default {
@@ -64,9 +65,13 @@ export default {
 			url: ''
 		};
 	},
+	computed: {
+		...mapState(['isSubPageLoading'])
+	},
 	watch: {
 		current: {
 			handler(newVal) {
+				console.log('watch current', newVal);
 				const currentSub = configSubs[newVal] || {};
 				const { name = '', url = '' } = currentSub || {};
 				this.name = name;
@@ -74,11 +79,22 @@ export default {
 			},
 			immediate: true
 		}
+	},
+	methods: {
+		...mapActions(['updateSubPageLoading'])
 	}
 };
 </script>
 
 <style>
+.width0 {
+	width: 0;
+}
+
+.height0 {
+	height: 0;
+}
+
 .width100 {
 	width: 100%;
 }
@@ -150,8 +166,8 @@ export default {
 #app {
 	box-sizing: border-box;
 	position: relative;
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
 }
 
 .appHeader {

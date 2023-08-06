@@ -4,6 +4,7 @@ import WujieVue from 'wujie-vue2';
 import router from './router';
 import App from './App.vue';
 import configSubs from './config/subs';
+import store from './store';
 
 import 'element-ui/lib/theme-chalk/index.css';
 
@@ -39,6 +40,7 @@ for (let key in configSubs) {
 }
 
 new Vue({
+	store, // 注册 store
 	router,
 	render: (h) => h(App)
 }).$mount('#app');
