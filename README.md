@@ -1,147 +1,251 @@
 # orz2 组件库项目
 
-## 在线展示
+一个基于 pnpm + turbo 的现代化 monorepo 项目，集成了微前端架构、Vue2/Vue3 组件库、工具函数库和配置管理。
 
-https://www.orz2.top/orz2-ui/
+## 🌟 项目特性
 
-## npm 组织
+- **Monorepo 架构**: 使用 pnpm workspace + turbo 实现高效的多包管理
+- **微前端支持**: 基于 wujie 微前端框架，支持多技术栈子应用
+- **多框架组件库**: 同时支持 Vue2 和 Vue3 的 H5 移动端组件
+- **工具函数库**: 提供常用的 JavaScript 工具函数
+- **配置管理**: 统一的开发配置和数据源管理
+- **Node.js 工具包**: 服务端开发工具函数
+- **完整的开发工具链**: 支持 TypeScript、ESLint、Prettier、Jest 测试等
 
-https://www.npmjs.com/org/orz2
+## 📦 在线展示
 
-## 应用技术
+- **组件库展示**: https://www.orz2.top/orz2-ui/
+- **NPM 组织**: https://www.npmjs.com/org/orz2
 
-pnpm + turbo + wujie + vue2 + vue3 + react + rollup + jsdoc
+## 🚀 快速开始
 
-## 启动命令
+### 环境要求
 
-`pnpm install` 安装项目依赖  
-`pnpm run start` 将项目中包含 start 命令的项目（页面项目）全部运行起来  
-`pnpm run build` 将项目中包含 build 命令的项目（页面项目）全部编译并打包输出到 dist 目录  
-`pnpm run lib` 将项目中包含 lib 命令的项目（packages 项目）全部编译并打包输出到 lib 目录
-`pnpm run test` 将项目中包含 test 命令的项目（packages 项目）全部执行单元测试
+- Node.js >= 16
+- pnpm >= 7
 
-## 项目结构
-
-```bash
-.
-├── README.md
-├── orz2-ui # 微前端基座项目
-├── package.json
-├── packages # 存放打包暴露出去的 npm 库
-│   ├── config # 封装一个为开发人员存放常用配置的统一数据源
-│   ├── kits # 封装一个应用在node.js的公共方法库
-│   ├── utils # 封装一个应用在JavaScript的公共方法库
-│   ├── vue2-h5 # 封装一个基于vue2框架用于h5移动端的ui组件库
-│   └── vue3-h5 # 封装一个基于vue3框架用于h5移动端的ui组件库
-├── pnpm-lock.yaml
-├── pnpm-workspace.yaml
-├── subs # 微前端各自技术栈的子壳子项目
-│   ├── vue2-h5 # 基于vue2框架用于h5移动端的子项目
-│   └── vue3-h5 # 基于vue3框架用于h5移动端的子项目
-└── turbo.json
-```
-
-## VSCode 配套插件
-
-ESLint + Prettier
-
-## pnpm 使用说明
+### 安装依赖
 
 ```bash
-# 安装全局依赖 pnpm
-$ npm install pnpm -g
-# 安装全局依赖 rollup (用于打包package)
-$ npm install rollup -g
-# 安装全局依赖 jest (用于单元测试脚本)
-$ npm install jest -g
-# 安装全局依赖 jsdoc (用于生成文档)
-$ npm install jsdoc -g
-# 安装全局依赖 turbo (用于本地起服务方便多个子项目联调)
-$ npm install turbo --g
-# 安装全局依赖 live-server (用于本地起服务方便jsDoc生成的项目联调)
-$ npm install live-server -g
+# 安装全局依赖
+npm install pnpm -g
+npm install rollup -g
+npm install jest -g
+npm install jsdoc -g
+npm install turbo -g
+npm install live-server -g
 
-# 安装配置文件中的依赖 (内部项目版本号不要与线上 npm 版本号相同，如果相同，pnpm install 就会优先拉取本地代码)
-$ pnpm i
-
-# 安装新依赖
-$ pnpm add <package_name> --filter <workspace_name>
-$ pnpm i <package_name> --filter <workspace_name>
-
-
-# 删除全局和每个workspace的node_modules (win无效)
-$ pnpm -r exec rm -rf node_modules
-$ pnpm rimraf  **/node_modules
-
-# 运行脚本
-$ pnpm -r --filter=<workspace_name> run <script>
+# 安装项目依赖
+pnpm install
 ```
 
-### pnpm 优势：
+### 开发命令
 
-1. 磁盘空间利用非常高效
-2. 支持 monorepo
+```bash
+# 启动所有页面项目（微前端基座 + 子应用）
+pnpm run start
 
-## jest 匹配规则
+# 构建所有页面项目
+pnpm run build
 
-- toBe 使用 Object.is 判断是否严格相等。
-- toEqual 递归检查对象或数组的每个字段。
-- toBeNull 只匹配 null。
-- toBeUndefined 只匹配 undefined。
-- toBeDefined 只匹配非 undefined。
-- toBeTruthy 只匹配真。
-- toBeFalsy 只匹配假。
-- toBeGreaterThan 实际值大于期望。
-- toBeGreaterThanOrEqual 实际值大于或等于期望值。
-- toBeLessThan 实际值小于期望值。
-- toBeLessThanOrEqual 实际值小于或等于期望值。
-- toBeCloseTo 比较浮点数的值，避免误差。
-- toMatch 正则匹配。
-- toContain 判断数组中是否包含指定项。
-- toHaveProperty(keyPath, value) 判断对象中是否包含指定属性。
-- toThrow 判断是否抛出指定的异常。
-- toBeInstanceOf 判断对象是否是某个类的实例，底层使用 instanceof。
+# 构建所有 packages 项目（组件库、工具库等）
+pnpm run lib
 
-## 参考文档
+# 运行所有测试
+pnpm run test
 
-### 无界
+# 启动文档服务
+pnpm run live
+```
 
-官方文档
-https://wujie-micro.github.io/doc/
+## 📁 项目结构
 
-### Turborepo
+```
+orz2/
+├── README.md                 # 项目说明文档
+├── package.json             # 根目录配置
+├── turbo.json              # Turbo 构建配置
+├── pnpm-workspace.yaml     # pnpm workspace 配置
+├── pnpm-lock.yaml          # 依赖锁定文件
+│
+├── orz2-ui/                # 微前端基座项目 (Vue2)
+│   ├── src/
+│   ├── public/
+│   └── package.json
+│
+├── packages/               # NPM 包集合
+│   ├── config/            # 配置管理包 (@orz2/config)
+│   │   ├── src/
+│   │   │   ├── rollupOptionsAutoprefixer/  # Rollup autoprefixer 配置
+│   │   │   └── rollupOptionsPx2vp/         # Rollup px2viewport 配置
+│   │   └── package.json
+│   │
+│   ├── utils/             # JavaScript 工具函数库 (@orz2/utils)
+│   │   ├── src/
+│   │   │   ├── parseUrl/      # URL 解析工具
+│   │   │   ├── sayHello/      # 问候函数
+│   │   │   └── splitCustom/   # 自定义分割函数
+│   │   ├── test/              # 单元测试
+│   │   └── package.json
+│   │
+│   ├── kits/              # Node.js 工具包 (@orz2/kits)
+│   │   ├── src/
+│   │   │   ├── getGitInfo/    # Git 信息获取
+│   │   │   └── sayHello/      # 服务端问候函数
+│   │   └── package.json
+│   │
+│   ├── vue2-h5/           # Vue2 H5 组件库 (@orz2/vue2-h5)
+│   │   ├── src/
+│   │   │   ├── OrzButton/     # 按钮组件
+│   │   │   └── OrzECharts/    # ECharts 图表组件
+│   │   └── package.json
+│   │
+│   └── vue3-h5/           # Vue3 H5 组件库 (@orz2/vue3-h5)
+│       ├── src/
+│       │   ├── OrzList/       # 列表组件
+│       │   └── OrzMap/        # 地图组件
+│       └── package.json
+│
+└── subs/                  # 微前端子应用
+    ├── sub-vue2-h5/      # Vue2 子应用
+    │   ├── src/
+    │   │   ├── components/
+    │   │   └── config/
+    │   └── package.json
+    │
+    └── sub-vue3-h5/      # Vue3 子应用
+        ├── src/
+        │   └── config/
+        └── package.json
+```
 
-#### 官方文档
+## 📚 包说明
 
-https://turbo.build/
-https://turbo.build/repo/docs
-https://github.com/vercel/turbo
-http://tech.uupt.com/?p=1185
-https://segmentfault.com/a/1190000042282389?sort=newest
+### @orz2/config (v0.0.2)
+配置管理包，提供统一的开发配置和数据源管理。
+- `rollupOptionsAutoprefixer`: Rollup autoprefixer 配置
+- `rollupOptionsPx2vp`: Rollup px2viewport 配置
 
-#### turbo.json 文档
+### @orz2/utils (v0.0.2)
+JavaScript 工具函数库，提供常用的前端工具函数。
+- `parseUrl`: URL 解析工具，支持复杂 URL 结构解析
+- `sayHello`: 问候函数
+- `splitCustom`: 自定义字符串分割函数
 
-https://turbo.build/repo/docs/reference/codemods#create-turbo-config
+### @orz2/kits (v0.0.2)
+Node.js 工具包，提供服务端开发工具函数。
+- `getGitInfo`: Git 信息获取工具
+- `sayHello`: 服务端问候函数
 
-### live-server
+### @orz2/vue2-h5 (v0.0.2)
+基于 Vue2 框架的 H5 移动端 UI 组件库。
+- `OrzButton`: 按钮组件，支持点击计数和自定义消息
+- `OrzECharts`: ECharts 图表组件
 
-#### 官方文档
+### @orz2/vue3-h5 (v0.0.2)
+基于 Vue3 框架的 H5 移动端 UI 组件库。
+- `OrzList`: 列表组件，支持点击计数
+- `OrzMap`: 地图组件
 
-https://www.npmjs.com/package/live-server
+## 🛠️ 开发指南
 
-### jsDoc
+### 添加新依赖
 
-#### 相关文档
+```bash
+# 为特定工作区添加依赖
+pnpm add <package_name> --filter <workspace_name>
+pnpm i <package_name> --filter <workspace_name>
+```
 
-https://jsdoc.bootcss.com/
-https://github.com/pencil-js/clean-jsdoc-theme
+### 运行特定项目
 
-### Vue
+```bash
+# 运行特定项目的脚本
+pnpm -r --filter=<workspace_name> run <script>
 
-#### Vue2 官方文档
+# 示例：运行 Vue2 组件库开发模式
+pnpm dev:@orz2/vue2-h5
 
-https://v2.cn.vuejs.org/
+# 示例：运行 Vue3 组件库开发模式
+pnpm dev:@orz2/vue3-h5
+```
 
-#### Vue3 官方文档
+### 清理依赖
 
-https://cn.vuejs.org/
+```bash
+# 删除所有 node_modules (Windows 无效)
+pnpm -r exec rm -rf node_modules
+pnpm rimraf **/node_modules
+```
+
+## 🧪 测试
+
+项目使用 Jest 进行单元测试，支持以下匹配规则：
+
+- `toBe`: 使用 Object.is 判断是否严格相等
+- `toEqual`: 递归检查对象或数组的每个字段
+- `toBeNull`: 只匹配 null
+- `toBeUndefined`: 只匹配 undefined
+- `toBeDefined`: 只匹配非 undefined
+- `toBeTruthy`: 只匹配真
+- `toBeFalsy`: 只匹配假
+- `toBeGreaterThan`: 实际值大于期望
+- `toBeGreaterThanOrEqual`: 实际值大于或等于期望值
+- `toBeLessThan`: 实际值小于期望值
+- `toBeLessThanOrEqual`: 实际值小于或等于期望值
+- `toBeCloseTo`: 比较浮点数的值，避免误差
+- `toMatch`: 正则匹配
+- `toContain`: 判断数组中是否包含指定项
+- `toHaveProperty(keyPath, value)`: 判断对象中是否包含指定属性
+- `toThrow`: 判断是否抛出指定的异常
+- `toBeInstanceOf`: 判断对象是否是某个类的实例
+
+## 🔧 开发工具
+
+### VSCode 推荐插件
+
+- ESLint
+- Prettier
+
+### 技术栈
+
+- **包管理**: pnpm
+- **构建工具**: turbo + rollup
+- **微前端**: wujie
+- **前端框架**: Vue2 + Vue3
+- **测试框架**: Jest
+- **文档生成**: JSDoc
+- **代码规范**: ESLint + Prettier
+
+## 📖 参考文档
+
+### 核心技术
+
+- **[无界微前端](https://wujie-micro.github.io/doc/)**: 微前端框架官方文档
+- **[Turborepo](https://turbo.build/)**: 构建系统官方文档
+- **[Vue2](https://v2.cn.vuejs.org/)**: Vue2 官方文档
+- **[Vue3](https://cn.vuejs.org/)**: Vue3 官方文档
+
+### 开发工具
+
+- **[JSDoc](https://jsdoc.bootcss.com/)**: 文档生成工具
+- **[live-server](https://www.npmjs.com/package/live-server)**: 本地开发服务器
+
+## 🤝 贡献指南
+
+1. Fork 本仓库
+2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 打开 Pull Request
+
+## 📄 许可证
+
+本项目采用 ISC 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情。
+
+## 🔗 相关链接
+
+- **GitHub 仓库**: https://github.com/Xshuliner/orz2
+- **问题反馈**: https://github.com/Xshuliner/orz2/issues
+- **在线演示**: https://www.orz2.top/orz2-ui/
+- **NPM 组织**: https://www.npmjs.com/org/orz2
